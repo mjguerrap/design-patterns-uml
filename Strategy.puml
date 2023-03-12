@@ -1,0 +1,30 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class ImplAStrategy {
++DoSomething()
+}
+class ImplBStrategy{
++DoSomething()
+}
+class ImplCStrategy{
++DoSomething()
+}
+class Client{
+-_doSomething
++DoSomething()
+}
+
+Client o---^ IStrategy
+IStrategy <|-- ImplAStrategy
+IStrategy <|-- ImplBStrategy
+IStrategy <|-- ImplCStrategy
+
+note right of Client::DoSomething
+    In Dosomething call => _doSomething.Dosomething();
+end note
+interface IStrategy {
+DoSomething()
+}
+
+@enduml
