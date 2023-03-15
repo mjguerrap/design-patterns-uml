@@ -1,4 +1,4 @@
-@startuml
+@startuml strategy
     title Strategy Design Pattern
 
     class ImplAStrategy {
