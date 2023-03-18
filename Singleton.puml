@@ -1,0 +1,19 @@
+@startuml
+title Singleton Design Pattern (considerado anti pattern nos dias de hoje)
+
+class Singleton << public >> {
+  - instanciaUnica
+  {static} +InstanciaUnica GetInstancia()
+}
+
+note right of Singleton::GetInstancia
+  Método estático que retorna sempre a mesma instância
+end note
+
+note top of Singleton
+  Classe pública com construtor privado
+end note
+
+@enduml
+
+
